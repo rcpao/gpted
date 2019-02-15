@@ -3,6 +3,9 @@ gpt.h
 */
 
 
+#pragma pack(0)
+
+
 /* https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_table_header_(LBA_1) */
 typedef struct _GPT_HEADER {
   /* 00 0x00 */ unsigned char Signature[8];
@@ -43,3 +46,6 @@ typedef struct _GPT_PARTITION_ENTRY {
 #define GPT_ATTR_BIT56_CHROME_OS_BOOT_SUCCESS	56
 #define GPT_ATTR_BIT52_CHROME_OS_TRIES_LEFT	52
 #define GPT_ATTR_BIT48_CHROME_OS_PRIORITY	48
+
+
+#pragma pack()
